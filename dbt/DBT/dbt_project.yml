@@ -1,0 +1,19 @@
+name: "dbt_project"
+version: "1.0"
+config-version: 2
+
+profile: "DBT"
+
+model-paths: ["models"]
+data-paths: ["data"]
+
+models:
+  dbt_project:
+    staging:
+      +materialized: view
+    intermediate:
+      +materialized: view
+    dimensions:
+      +materialized: table
+    marts:
+      +materialized: table
