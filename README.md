@@ -2,7 +2,7 @@
 
 A comprehensive data pipeline that collects, processes, analyzes, and visualizes customer reviews about Moroccan banks using modern data engineering tools and natural language processing.
 
-## 📋 Project Overview
+## Project Overview
 
 This project implements an end-to-end data pipeline that:
 - Scrapes customer reviews from Google Maps using SerpAPI
@@ -12,7 +12,7 @@ This project implements an end-to-end data pipeline that:
 - Creates interactive visualizations in Power BI
 - Automates the entire workflow using Apache Airflow
 
-## 🎯 Project Goals
+## Project Goals
 
 - **Data Collection**: Automated scraping of customer reviews from Google Maps
 - **Data Processing**: Clean, standardize, and enrich review data
@@ -24,7 +24,7 @@ This project implements an end-to-end data pipeline that:
 - **Visualization**: Create insightful dashboards for business intelligence
 - **Automation**: Monthly pipeline execution for fresh data
 
-## 🛠️ Technology Stack
+##  Technology Stack
 
 | Component | Technology | Purpose |
 |-----------|------------|---------|
@@ -36,35 +36,7 @@ This project implements an end-to-end data pipeline that:
 | **Orchestration** | Apache Airflow | Pipeline automation |
 | **Containerization** | Docker | Environment management |
 
-## 📁 Project Structure
-
-```
-project/
-├── data/                           # Raw data storage
-│   ├── banks.json                 # Bank information
-│   └── reviews.json               # Scraped reviews
-├── scripts/                       # Python scripts
-│   ├── scraping/                  # Data collection
-│   │   ├── script_bank.py         # Bank data scraping
-│   │   └── script_reviews.py      # Review scraping
-│   ├── ingestion/                 # Data loading
-│   │   └── upload_raw_reviews.py  # Raw data upload
-│   └── enrichment/                # NLP processing
-│       └── enrich_reviews.py      # Language & sentiment analysis
-├── dbt/                           # Data transformation
-│   ├── dbt_project.yml           # DBT configuration
-│   └── models/                   # DBT models
-│       ├── staging/              # Raw data staging
-│       ├── intermediate/         # Intermediate transformations
-│       ├── dimensions/           # Dimension tables
-│       └── marts/               # Final data marts
-├── dags/                         # Airflow DAGs
-│   └── monthly_reviews_pipeline.py
-├── docker-compose.yaml           # Docker configuration
-└── README.md                     # Project documentation
-```
-
-## 🔄 Workflow Pipeline
+##  Workflow Pipeline
 
 ### 1. Data Scraping (Monthly)
 ```bash
@@ -117,7 +89,7 @@ docker-compose up -d
 # Monitor DAG: monthly_reviews_pipeline.py
 ```
 
-## 📊 Data Model (Star Schema)
+##  Data Model (Star Schema)
 
 ### Fact Table
 - **fact_reviews**: Central table containing review metrics and foreign keys
@@ -129,7 +101,7 @@ docker-compose up -d
 
 > **Note**: Branch-level dimension table (dim_branch) was not implemented due to insufficient branch-specific information in the scraped data.
 
-## 📈 Visualizations & Analytics
+##  Visualizations & Analytics
 
 The Power BI dashboard includes:
 
@@ -139,7 +111,7 @@ The Power BI dashboard includes:
 - **Performance Metrics**: Average satisfaction scores per bank
 - **Interactive Filters**: Bank name, date range, and sentiment categories
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 - Python 3.8+
@@ -160,7 +132,7 @@ The Power BI dashboard includes:
 - Configure SerpAPI credentials
 - Set up Power BI data source connections
 
-## 📅 Automation Schedule
+##  Automation Schedule
 
 The pipeline runs monthly via Apache Airflow to:
 - Collect new reviews
@@ -168,11 +140,11 @@ The pipeline runs monthly via Apache Airflow to:
 - Update visualizations
 - Maintain data freshness
 
-## 🤝 Contributing
+##  Contributing
 
 Contributions are welcome! Please read the contributing guidelines and submit pull requests for any improvements.
 
-## 👨‍💻 Author
+##  Author
 
 **Mustapha Dafa**
 
